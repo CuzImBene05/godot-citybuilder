@@ -54,7 +54,7 @@ public partial class SimBase : Node2D
 
 	public void Tick() 
 	{
-		GD.Print("tick");
+		GD.Print("tick tack tick");
 	}
 
 }
