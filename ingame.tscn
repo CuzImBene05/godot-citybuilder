@@ -1,29 +1,6 @@
 [gd_scene format=3 uid="uid://dwyfj4j7maear"]
 
 [ext_resource type="Script" uid="uid://besyl6napivwb" path="res://scripts/_start/MainSceneHandler.cs" id="1_wnhdf"]
-[ext_resource type="Script" uid="uid://c5npgs5ltmfcl" path="res://scripts/helper/Importer.cs" id="3_p0uuu"]
-[ext_resource type="Script" uid="uid://dpvfmuqw5t4du" path="res://scripts/simulation/SimBase.cs" id="3_wnhdf"]
-[ext_resource type="Script" uid="uid://bcv8l1i05bo1i" path="res://scripts/simulation/TrafficSim.cs" id="4_kgmhh"]
-[ext_resource type="Script" uid="uid://brhdhtnakknt" path="res://scripts/simulation/tools/PlacementTools.cs" id="5_kgmhh"]
 
 [node name="main scene" type="Node2D" unique_id=160661091]
 script = ExtResource("1_wnhdf")
-
-[node name="importer" type="Node2D" parent="." unique_id=1566685153]
-script = ExtResource("3_p0uuu")
-
-[node name="renderer" type="Node2D" parent="." unique_id=307505709]
-
-[node name="sim base" type="Node2D" parent="." unique_id=701580952]
-unique_name_in_owner = true
-script = ExtResource("3_wnhdf")
-
-[node name="traffic" type="Node2D" parent="sim base" unique_id=560030888]
-script = ExtResource("4_kgmhh")
-
-[node name="traffic tools" type="Node2D" parent="sim base" unique_id=945701792]
-script = ExtResource("5_kgmhh")
-
-[node name="controls" type="Node2D" parent="." unique_id=1431463812]
-
-[node name="Node2D" type="Node2D" parent="." unique_id=448015832]

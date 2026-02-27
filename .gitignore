@@ -14,3 +14,5 @@ Thumbs.db
 
 # Export builds (optional)
 export/
+
+.builds
