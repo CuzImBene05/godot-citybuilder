@@ -1,0 +1,9 @@
+-I'm making my first game (thumbnail -> macbook pov with controller)
+
+-visual overhaul (thumbnail like JohnBRX/isocore)
+
+-opitimization (so it runs on 3ds?) 
+
+-how I made my game fun/satisfying
+
+-

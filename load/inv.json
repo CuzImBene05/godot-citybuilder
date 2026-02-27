@@ -1,0 +1,16 @@
+{
+    "road": 
+    {
+        "slots": 2,
+        "speed": 1,
+        "lanes_left": 1,
+        "lanes_right": 1
+    },
+    "park": 
+    {
+        "slots": 2,
+        "speed": 1,
+        "lanes_left": 1,
+        "lanes_right": 1
+    }
+}

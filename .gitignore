@@ -1,0 +1,16 @@
+# Godot (import cache)
+.import/
+.godot/
+
+# Mono / C# builds
+.mono/
+bin/
+obj/
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Export builds (optional)
+export/
