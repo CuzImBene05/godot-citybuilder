@@ -46,7 +46,7 @@ public partial class PlacementTools : Node2D
 
 	public void RemoveBuilding(int id) 
 	{
-		
+		GD.Print("hello github");
 	}
 
 
