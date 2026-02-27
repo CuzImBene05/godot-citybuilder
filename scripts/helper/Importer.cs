@@ -41,6 +41,6 @@ public partial class Importer : Node2D
 
 	public void FetchBuilding()
 	{
-		
+		//hehe
 	}
 }
