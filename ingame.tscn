@@ -25,3 +25,5 @@ script = ExtResource("4_kgmhh")
 script = ExtResource("5_kgmhh")
 
 [node name="controls" type="Node2D" parent="." unique_id=1431463812]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=448015832]
