@@ -8,7 +8,7 @@ using GodotVec2 = Godot.Vector2;
 public partial class EngineInputs : Node2D
 {
     private EngineBridge _EngineBridge;
-    private ClientBase _ClientBase;
+    private InputHandler _InputHandler;
 
     // Reuse (kein GC pro Frame)
     // Client bekommt NUR Strings. Format:
@@ -19,7 +19,7 @@ public partial class EngineInputs : Node2D
     public override void _Ready()
     {
         _EngineBridge = GetNode<EngineBridge>("%engine bridge");
-        _ClientBase = _EngineBridge._Handler._ClientBase;
+        _InputHandler = _EngineBridge._Handler._InputHandler;
     }
 
     public void ReadInputs()
@@ -127,7 +127,7 @@ public partial class EngineInputs : Node2D
         }
 
         // Send to client (Client macht Mapping + Hold/JustPressed Logik + Umrechnungen)
-        _ClientBase.ReceiveInputs(_inputsDown, leftStick, rightStick, mousePos);
+        _InputHandler.ReceiveInputs(_inputsDown, leftStick, rightStick, mousePos);
     }
 
 

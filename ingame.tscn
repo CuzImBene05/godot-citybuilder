@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d11fjvjreubbl" path="res://scripts/EngineBridge.cs" id="1_62bee"]
 [ext_resource type="Script" uid="uid://dy5c4iguh8nge" path="res://scripts/EngineInputs.cs" id="2_p0uuu"]
+[ext_resource type="Script" uid="uid://di1boqtjg676l" path="res://scripts/EngineConsole.cs" id="3_p0uuu"]
 
 [node name="scene handler" type="Node2D" unique_id=160661091]
 position = Vector2(0, 1)
@@ -13,3 +14,7 @@ script = ExtResource("1_62bee")
 [node name="input engine" type="Node2D" parent="." unique_id=596922162]
 unique_name_in_owner = true
 script = ExtResource("2_p0uuu")
+
+[node name="engine console" type="Node2D" parent="." unique_id=967032737]
+unique_name_in_owner = true
+script = ExtResource("3_p0uuu")

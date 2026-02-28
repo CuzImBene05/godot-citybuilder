@@ -1,17 +1,28 @@
 public partial class Handler
 {
-    public SimBase _SimBase = new();
-    public ClientBase _ClientBase = new();
+    public InputHandler _InputHandler;
+
+    public EngineBridge _EngineBridge;
+    public EngineConsole _EngineConsole;
+    
+
+    private SimBase _SimBase = new();
+
+    
 
     public string current_scene = "ingame";
 
     public void Start()
     {
-        
+        _InputHandler = new(this);
     }
 
-    public void Update()
+    public void Update(double delta)
     {
         
     }
+
+    
+
+    
 }

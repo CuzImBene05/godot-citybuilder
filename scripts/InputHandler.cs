@@ -1,12 +1,17 @@
 
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using System.Linq;
 using System.Numerics;
 
-public partial class ClientBase 
+public partial class InputHandler 
 {
-    
+    private Handler _Handler;
 
+    public InputHandler(Handler handler)
+    {
+        _Handler = handler;
+    }
 
     public void SendAction()
     {
@@ -18,6 +23,10 @@ public partial class ClientBase
 
     public void ReceiveInputs(HashSet<string> _inputsDown, Vector2 leftStick, Vector2 rightStick, Vector2 mousePos)
     {
+        if(_inputsDown.Count > 0)
+        {
+            _Handler._EngineConsole.Log(_inputsDown.First());
+        }
         
     }
 

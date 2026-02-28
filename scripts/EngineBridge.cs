@@ -13,6 +13,7 @@ public partial class EngineBridge : Node2D
     private EngineInputs _EngineInputs;
 
     //Outputs
+    public EngineConsole _EngineConsole;
     // Sounds
     // Camera
     // Render Stacks
@@ -20,8 +21,10 @@ public partial class EngineBridge : Node2D
 
     public override void _EnterTree()
     {
-       _EngineInputs = GetNode<EngineInputs>("%input engine");
-
+        _EngineInputs = GetNode<EngineInputs>("%input engine");
+        _EngineConsole = GetNode<EngineConsole>("%engine console");
+        _Handler._EngineBridge = this;
+        _Handler._EngineConsole = _EngineConsole;
 
     }
 
@@ -33,10 +36,12 @@ public partial class EngineBridge : Node2D
     public override void _Process(double delta)
     {
         _EngineInputs.ReadInputs();
-        _Handler.Update();
+        _Handler.Update(delta);
+
 
         // EngineCamera, EngineSounds, ...
     }
+    
 
 
 }
