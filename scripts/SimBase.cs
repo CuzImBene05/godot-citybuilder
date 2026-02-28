@@ -2,6 +2,8 @@
 
 public partial class SimBase
 {
+    public int heheheha = 3;
+    
     public SimBase()
     {
         
@@ -9,6 +11,6 @@ public partial class SimBase
 
     public void Tick()
     {
-        
+        heheheha++;
     }
 }
