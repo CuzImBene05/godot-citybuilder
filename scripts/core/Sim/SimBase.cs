@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Godot;
 
 public partial class SimBase
 {
@@ -12,6 +13,8 @@ public partial class SimBase
     public void Start()
     {
         _Placement = new(this);
+
+        
     }
     
     
@@ -22,7 +25,7 @@ public partial class SimBase
 
     public void Tick()
     {
-        _Handler._EngineConsole.Log($"gugugaga");
+        _Handler._EngineBridge._EngineConsole.Log($"gugugaga");
     }
 
     public int GetID(string type)
@@ -41,4 +44,6 @@ public partial class SimBase
 
         return -1;
     }
+
+    
 }

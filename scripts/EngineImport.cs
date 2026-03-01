@@ -1,22 +1,9 @@
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Mail;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 using Godot;
 
-public partial class EngineImport : Node2D
+public partial class EngineImport : Node
 {
-   
-   
-   //API
-    public Json ImportJson()
+    public string ReadJsonRaw(string path)
     {
-        return new();
-    }
-
-    public void Modify()
-    {
-        
+        return FileAccess.GetFileAsString(path); // reines weiterreichen
     }
 }

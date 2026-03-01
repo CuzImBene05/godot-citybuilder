@@ -25,10 +25,6 @@ public partial class EngineBridge : Node2D
         _EngineConsole = GetNode<EngineConsole>("%engine console");
         _EngineRendering = GetNode<EngineRendering>("%engine rendering");
         _Handler._EngineBridge = this;
-        _Handler._EngineConsole = _EngineConsole;
-        _Handler._EngineImport = _EngineImport;
-        _Handler._EngineInputs = _EngineInputs;
-        _Handler._EngineRendering = _EngineRendering;
         
     }
 

@@ -30,18 +30,3 @@ public partial class EngineRendering : Node2D
 
 }
 
-public struct BatchVertex2D
-{
-    public short x, y;
-    public short u, v;
-    public uint color;
-    public byte layer;
-    public byte pad0, pad1, pad2; // alignment
-}
-
-public sealed class DrawBatch2D
-{
-    public int textureId;                 // atlas index
-    public List<BatchVertex2D> vertices;  // or arrays for perf
-    public List<ushort> indices;          // 16-bit index (3DS-friendly)
-}

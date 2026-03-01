@@ -23,7 +23,7 @@ public partial class InputHandler
     public void RegisterAction(string name, string key)
     {
         Mappings[name] = key;
-        _Handler._EngineConsole.Log($"registered {name} for {key}");
+        _Handler._EngineBridge._EngineConsole.Log($"registered {name} for {key}");
     }
 
     public bool GetActionDown(string name)

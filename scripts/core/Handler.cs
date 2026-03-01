@@ -3,12 +3,11 @@ using System.Security.Cryptography;
 public partial class Handler
 {
     public EngineBridge _EngineBridge;
-    public EngineConsole _EngineConsole;
-    public EngineImport _EngineImport;
-    public EngineInputs _EngineInputs;
-    public EngineRendering _EngineRendering;
 
     public InputHandler _InputHandler;
+    
+    public ImportHandler _ImportHandler;
+
     private SimBase _SimBase;
 
     
@@ -18,19 +17,24 @@ public partial class Handler
     public void Start()
     {
         _InputHandler = new(this);
-        _SimBase = new(this);
+        _ImportHandler = new(this);
         
-        _EngineImport.Modify();
+        _SimBase = new(this);
 
         _InputHandler.RegisterAction("test action","key:T");
 
+        _ImportHandler.ImportAll();
+
         _SimBase.Start();
         
+        _SimBase._Placement.InitBuildingGrid(new Vector2Int(256,256));
+        _SimBase._Placement.SetBuilding(new Vector2Int(0,0),"standard");
+        _SimBase._Placement.SetBuilding(new Vector2Int(0,0),"standard");
     }
 
     public void Update(double delta)
     {
-        _EngineInputs.ReadInputs();
+        _EngineBridge._EngineInputs.ReadInputs();
         if (_InputHandler.GetActionDown("test action"))
         {
             _SimBase.Tick();
