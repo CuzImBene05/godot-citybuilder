@@ -6,25 +6,25 @@ public partial class Handler
     public EngineConsole _EngineConsole;
     public EngineImport _EngineImport;
     public EngineInputs _EngineInputs;
+    public EngineRendering _EngineRendering;
 
     public InputHandler _InputHandler;
-    
-
-
-    private SimBase _SimBase = new();
-
+    private SimBase _SimBase;
 
     
-
     public string current_scene = "ingame";
+
 
     public void Start()
     {
         _InputHandler = new(this);
+        _SimBase = new(this);
         
         _EngineImport.Modify();
 
         _InputHandler.RegisterAction("test action","key:T");
+
+        _SimBase.Start();
         
     }
 
@@ -33,7 +33,7 @@ public partial class Handler
         _EngineInputs.ReadInputs();
         if (_InputHandler.GetActionDown("test action"))
         {
-            _EngineConsole.Log("pass");
+            _SimBase.Tick();
         }
         
     }
