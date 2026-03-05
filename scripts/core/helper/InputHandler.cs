@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.InteropServices;
 
 public partial class InputHandler 
 {
@@ -53,8 +54,11 @@ public partial class InputHandler
         return false;
     }
 
-    public void ReceiveInputs(HashSet<string> _inputsDown, Vector2 leftStick, Vector2 rightStick, Vector2 mousePos)
+    public void ReceiveInputs()
     {
+        var packet = _Handler._EngineBridge._EngineInputs.ReadInputs();
+        var _inputsDown = packet.inputsDown;
+
         // Build the set of actions that are currently held based on the raw input tokens.
         // NOTE: We intentionally keep this simple: mapping + hold/down/up sets.
 

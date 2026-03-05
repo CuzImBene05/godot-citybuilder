@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Linq.Expressions;
-using Godot;
+using System.Numerics;
+
 
 public struct Vector2Int
 {
@@ -66,21 +67,7 @@ public sealed class Grid<T>
     }
 }
 
-public struct BatchVertex2D
-{
-    public short x, y;
-    public short u, v;
-    public uint color;
-    public byte layer;
-    public byte pad0, pad1, pad2; // alignment
-}
 
-public sealed class DrawBatch2D
-{
-    public int textureId;                 // atlas index
-    public List<BatchVertex2D> vertices;  // or arrays for perf
-    public List<ushort> indices;          // 16-bit index (3DS-friendly)
-}
 
 
 
@@ -99,3 +86,12 @@ public sealed class BuildingsDTO
     public int size_x { get; set; }
     public int size_y { get; set; }
 }
+
+public struct RawInputPacket
+{
+    public HashSet<string> inputsDown;
+    public Vector2 leftStick;
+    public Vector2 rightStick;
+    public Vector2 mousePos;
+}
+

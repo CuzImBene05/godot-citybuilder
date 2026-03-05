@@ -1,3 +1,25 @@
-ziel: /spawn Building
+-camera setup (basic functions)
+-placement (stacks)
+-camera pixel perfect
+-controls -> camera movement
+-cursor -> place + delete 
+-custom mappings
+-save, load, autoload on startup
 
-//wir 
+
+
+
+Longterm: (2 years) 
+V1: Buildings, simple Car Traffic, Rendering, Save + Load, basic placement
+V2: Simulation, Services, Routines, public Transport 
+V3: UI, readability, zoning, gamefeel
+V4: gameloop, progression, money, RCI 
+V5: balancing, content
+
+Devlogs:
+-I'm making my first game (thumbnail -> macbook pov with controller)
+-visual overhaul (thumbnail like JohnBRX/isocore)
+-opitimization (so it runs on 3ds?) 
+-how I made my game fun/satisfying
+-playtest (my game sucked)
+-

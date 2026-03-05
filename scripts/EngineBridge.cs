@@ -1,8 +1,4 @@
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Mail;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 using Godot;
 
 public partial class EngineBridge : Node2D
@@ -15,7 +11,6 @@ public partial class EngineBridge : Node2D
     public EngineConsole _EngineConsole;
     public EngineRendering _EngineRendering;
     // Sounds
-    // Camera
     // UI
 
     public override void _EnterTree()

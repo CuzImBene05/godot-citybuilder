@@ -5,6 +5,8 @@ using Godot;
 using NumVec2 = System.Numerics.Vector2;
 using GodotVec2 = Godot.Vector2;
 
+
+
 public partial class EngineInputs : Node2D
 {
     private EngineBridge _EngineBridge;
@@ -22,7 +24,7 @@ public partial class EngineInputs : Node2D
         _InputHandler = _EngineBridge._Handler._InputHandler;
     }
 
-    public void ReadInputs()
+    public RawInputPacket ReadInputs()
     {
         _inputsDown.Clear();
 
@@ -127,7 +129,13 @@ public partial class EngineInputs : Node2D
         }
 
         // Send to client (Client macht Mapping + Hold/JustPressed Logik + Umrechnungen)
-        _InputHandler.ReceiveInputs(_inputsDown, leftStick, rightStick, mousePos);
+        return new RawInputPacket
+        {
+            inputsDown = _inputsDown,
+            leftStick = leftStick,
+            rightStick = rightStick,
+            mousePos = mousePos
+        };
     }
 
 

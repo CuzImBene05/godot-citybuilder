@@ -28,3 +28,6 @@ script = ExtResource("4_wnhdf")
 [node name="engine rendering" type="Node2D" parent="." unique_id=185487322]
 unique_name_in_owner = true
 script = ExtResource("5_kgmhh")
+
+[node name="cam" type="Camera2D" parent="." unique_id=107101412]
+unique_name_in_owner = true
